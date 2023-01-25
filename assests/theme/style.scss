@@ -1,0 +1,22 @@
+.brands-img{
+    width: 70px;
+    height: 37px;
+}
+
+.f-s-img{
+    z-index: -1;
+    width: 159px;
+    right: -57px;
+    bottom: -44px;
+}
+
+.div-feature-service:hover .f-s-img{
+    right: -40px;
+    bottom: -20px;
+    transition: 0.9s;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
