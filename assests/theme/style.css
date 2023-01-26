@@ -22,7 +22,7 @@ header {
   top: 0;
 }
 
-@media (min-width: 900px) and (max-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1300px) {
   .sys-card-v1 .sys-grid {
     flex-wrap: wrap;
     justify-content: center;
