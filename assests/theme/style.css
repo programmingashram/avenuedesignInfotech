@@ -20,4 +20,11 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .sys-card-v1 .sys-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

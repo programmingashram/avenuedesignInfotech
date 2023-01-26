@@ -20,6 +20,13 @@ header{
     position: sticky;
     top: 0;
 }
-[id='/']{
-    display: none;
+
+
+@media(min-width : 900px) and (max-width: 1200px){
+    .sys-card-v1{
+        .sys-grid{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    } 
 }
