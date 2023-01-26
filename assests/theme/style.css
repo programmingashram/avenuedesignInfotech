@@ -17,11 +17,21 @@
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  transition: 0.6s;
+  z-index: 999999;
 }
 
+@media (max-width: 767px) {
+  .col-md-6, .col-md-3, .col-md-4, .col-md-5 {
+    width: 100% !important;
+  }
+  .sys-grid {
+    flex-direction: column;
+  }
+  .sys-navbar {
+    display: none !important;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1600px) {
   .sys-card-v1 .sys-grid {
     flex-wrap: wrap;

@@ -9,18 +9,20 @@
         <link rel="stylesheet" href="./assests/theme/style.css">
     </head>
     <body>
-        <header class="sys-header bg-light p-2 sticky-top">
+        <div class="p-2 bg-light"></div>
+               
+        <header class="sys-header  p-3 bg-light" id="navigation-bar">
             <div class="sys-container">
                 <div class="sys-grid">
                     <div class="col-md-6">
                     <div class="header-wrapper">
-                        <h3> <span class="text-accent-65">Avenue </span> Design</h3>
+                        <h1 class="h1"> <span class="text-accent">Avenue </span> Design</h1>
                     </div>
                     </div>
                     <div class="col-md-6">
                     <div class="header-wrapper">
                         <ul class="sys-navbar mt-2 justify-c-end">
-                            <li><a href="#" class="text-accent-65">Home</a></li>
+                            <li><a href="#" class="text-accent">Home</a></li>
                             <li><a href="#" class="text-dark">Services</a></li>
                             <li><a href="#" class="text-dark">Our Products</a></li>
                             <li><a href="#" class="text-dark">Contact Us</a></li>
@@ -177,6 +179,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-3">
                         <div class="projects-card">
                             <div class="sys-card-v1 sys-elevation-v2">
@@ -252,7 +255,34 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="sys-action mt-5">
+                    <button type="button" size="lg" class="sys-btn-outline-accent">
+                        <i class="fa-solid fa-eye"></i> View More
+                    </button>
+                </div>
             </div>
         </article>
+
+        <script>
+           window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navigation-bar");
+            var sticky = navbar.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.replace("p-3", "p-1");
+                    navbar.classList.add('sticky-top');
+                    navbar.classList.add('sys-elevation-v2');
+                    navbar.classList.add('bg-light');
+                    
+                } 
+                else {
+                    navbar.classList.replace("p-1", "p-3");
+                    navbar.classList.remove('sticky-top');
+                    navbar.classList.remove('sys-elevation-v2');
+                    navbar.classList.remove('bg-light');
+                }
+            }
+        </script>
     </body>
 </html>
