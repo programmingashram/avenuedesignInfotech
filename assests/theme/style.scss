@@ -37,16 +37,20 @@ header{
     .sys-navbar{
         display: none !important;
     }
-    .display-1{
+    .display-3{
         font-size: 2.5rem;
     }
 }
 
-@media(min-width : 1200px) and (max-width: 1600px){
+// small laptop screens
+@media(min-width : 940px) and (max-width: 1600px){
     .sys-card-v1{
         .sys-grid{
             flex-wrap: wrap;
             justify-content: center;
         }
     } 
+    .gap-sm{
+        gap: inherit;
+    }
 }
