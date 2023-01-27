@@ -21,6 +21,11 @@ header {
   z-index: 999999;
 }
 
+.logo {
+  width: 49px;
+  display: none;
+}
+
 @media (max-width: 767px) {
   .col-md-6, .col-md-3, .col-md-4, .col-md-5 {
     width: 100% !important;
