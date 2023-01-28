@@ -28,6 +28,11 @@ header{
 
 .mobile-menu{
     animation: slideLeft 1s;
+    display: none;
+}
+
+
+.hide{
     display: none !important;
 }
 
@@ -48,7 +53,7 @@ header{
         display: none;
     }
     .mobile-menu{
-        display: block !important;
+        display: block;
         animation: slideLeft 1s;
     }
   
@@ -69,7 +74,7 @@ header{
         display: none;
     }
     .mobile-menu{
-        display: block !important;
+        display: block;
     }
 }
 

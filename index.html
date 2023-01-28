@@ -469,7 +469,7 @@
                     titleLogo.style.display = "none"
                     logoImg.style.display = "block";
                     temp.style.flexDirection = "row";
-                    mobileMenu.style.display = "block";
+                    mobileMenu.classList.remove('hide');
                 } 
                 else {
                     navbar.classList.replace("p-1", "p-3");
@@ -479,7 +479,7 @@
                     titleLogo.style.display = "block"
                     logoImg.style.display = "none";
                     temp.style.flexDirection = "row";
-                    mobileMenu.style.display = "none";
+                    mobileMenu.classList.add('hide');
                 }
             }
         </script>

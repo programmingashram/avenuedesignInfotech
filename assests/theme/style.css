@@ -29,6 +29,10 @@ header {
 .mobile-menu {
   -webkit-animation: slideLeft 1s;
           animation: slideLeft 1s;
+  display: none;
+}
+
+.hide {
   display: none !important;
 }
 
@@ -49,7 +53,7 @@ header {
     display: none;
   }
   .mobile-menu {
-    display: block !important;
+    display: block;
     -webkit-animation: slideLeft 1s;
             animation: slideLeft 1s;
   }
@@ -66,7 +70,7 @@ header {
     display: none;
   }
   .mobile-menu {
-    display: block !important;
+    display: block;
   }
 }
 @-webkit-keyframes slideLeft {
