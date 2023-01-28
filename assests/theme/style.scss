@@ -26,6 +26,10 @@ header{
     display: none;
 }
 
+.mobile-menu{
+    animation: slideLeft 1s;
+    display: none !important;
+}
 
 @media(max-width: 767px){
     .col-md-6, .col-md-3, .col-md-4, .col-md-5{
@@ -34,12 +38,20 @@ header{
     .sys-grid{
         flex-direction: column;
     }
-    .sys-navbar{
-        display: none !important;
-    }
     .display-3{
         font-size: 2.5rem;
     }
+    .sys-menu{
+        display: none;
+    }
+    .sys-menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: block !important;
+        animation: slideLeft 1s;
+    }
+  
 }
 
 // small laptop screens
@@ -52,5 +64,22 @@ header{
     } 
     .gap-sm{
         gap: inherit;
+    }
+    .sys-menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: block !important;
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
     }
 }
