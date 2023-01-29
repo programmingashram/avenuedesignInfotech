@@ -56,28 +56,6 @@ header{
     }
 }
 
-@media(max-width: 767px){
-    .col-md-6, .col-md-3, .col-md-4, .col-md-5{
-        width: 100% !important;
-    }
-    .sys-grid{
-        flex-direction: column;
-    }
-    .display-3{
-        font-size: 2.5rem;
-    }
-    .sys-menu{
-        display: none;
-    }
-    .sys-menu{
-        display: none;
-    }
-    .mobile-menu{
-        display: block;
-        animation: slideLeft 1s;
-    }
-  
-}
 
 // small laptop screens
 @media(min-width : 940px) and (max-width: 1600px){
@@ -126,15 +104,10 @@ body {
   }
   
   .cube-wrap {
-    --size: 30vmin;
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    --size: 6vmin;
     width: 0;
     height: 0;
     perspective: 100vmin;
-    z-index: -1;
-    opacity: 0.50;
 }
   .cube {
     transform-style: preserve-3d;
@@ -191,3 +164,45 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: both;
   }
+
+  .side{
+    img{
+        width: 30px;
+        margin-top: 7px;
+        margin-left: 3px;
+    }
+}
+
+  
+@media(max-width: 767px){
+    .col-md-6, .col-md-3, .col-md-4, .col-md-5{
+        width: 100% !important;
+    }
+    .sys-grid{
+        flex-direction: column;
+    }
+    .display-3{
+        font-size: 2.5rem;
+    }
+    .sys-menu{
+        display: none;
+    }
+    .sys-menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+        animation: slideLeft 1s;
+    }
+    .cube-wrap {
+        --size: 8vmin !important;
+    }
+    .side{
+        img{
+            width: 20px;
+            margin-top: 7px;
+            margin-left: 3px;
+        }
+    }
+  
+}
