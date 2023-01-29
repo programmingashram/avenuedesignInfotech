@@ -117,10 +117,11 @@ body {
   }
 }
 .cube-wrap {
-  --size: 6vmin;
+  --size: 20vmin;
   width: 0;
   height: 0;
   perspective: 100vmin;
+  margin: 0 auto;
 }
 
 .cube {
@@ -190,12 +191,6 @@ body {
           animation-fill-mode: both;
 }
 
-.side img {
-  width: 30px;
-  margin-top: 7px;
-  margin-left: 3px;
-}
-
 @media (max-width: 767px) {
   .col-md-6, .col-md-3, .col-md-4, .col-md-5 {
     width: 100% !important;
@@ -216,13 +211,5 @@ body {
     display: block;
     -webkit-animation: slideLeft 1s;
             animation: slideLeft 1s;
-  }
-  .cube-wrap {
-    --size: 8vmin !important;
-  }
-  .side img {
-    width: 20px;
-    margin-top: 7px;
-    margin-left: 3px;
   }
 }/*# sourceMappingURL=style.css.map */
