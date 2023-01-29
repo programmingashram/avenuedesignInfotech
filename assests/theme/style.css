@@ -36,6 +36,28 @@ header {
   display: none !important;
 }
 
+.trans {
+  -webkit-animation: slideUp 1s;
+          animation: slideUp 1s;
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 @media (max-width: 767px) {
   .col-md-6, .col-md-3, .col-md-4, .col-md-5 {
     width: 100% !important;

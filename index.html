@@ -95,15 +95,15 @@
             </div>
         </section>
 
-        <article class="mt-5 mb-5">
+        <article class="mt-5 mb-5 pt-5 pb-5" id="article01">
             <div class="sys-container">
                 <div class="sys-grid gap-lg">
                     <div class="col-md-4">
-                        <div class="div-feature-service sys-elevation-v3 p-4 sys-radius-lg overflow-hidden relative">
+                        <div class="div-feature-service sys-elevation-v3 bg-light p-4 sys-radius-lg overflow-hidden relative">
                             <h1 class="h5 text-dark-90 mb-2">
                               <i class="fa-brands fa-dev p-2 sys-radius-lg bg-critical-60 sys-elevation-v2"></i>  Website Development
                             </h1>
-                            <p>
+                            <p class="text-dark-90">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reiciendis alias iusto voluptates nesciunt. Totam vero accusamus adipisci consequuntur, delectus, 
                             </p>
                             <div class="sys-action">
@@ -115,11 +115,11 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="div-feature-service sys-elevation-v3 p-4 sys-radius-lg overflow-hidden relative">
+                        <div class="div-feature-service sys-elevation-v3 bg-light p-4 sys-radius-lg overflow-hidden relative">
                             <h1 class="h5 text-dark-90 mb-2">
                                 <i class="fa-sharp fa-solid fa-rectangle-ad p-2 sys-radius-lg bg-accent-60 sys-elevation-v2"></i> Digital Marketing
                             </h1>
-                            <p>
+                            <p class="text-dark-90">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reiciendis alias iusto voluptates nesciunt. Totam vero accusamus adipisci consequuntur, delectus, 
                             </p>
                             <div class="sys-action">
@@ -131,11 +131,11 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="div-feature-service sys-elevation-v3 p-4 sys-radius-lg overflow-hidden relative">
+                        <div class="div-feature-service sys-elevation-v3 bg-light p-4  sys-radius-lg overflow-hidden relative">
                             <h1 class="h5 text-dark-90 mb-2">
                                 <i class="fa-solid fa-palette p-2 sys-radius-lg bg-alert-60 sys-elevation-v2"></i>  Graphic Design
                             </h1>
-                            <p>
+                            <p class="text-dark-90">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reiciendis alias iusto voluptates nesciunt. Totam vero accusamus adipisci consequuntur, delectus, 
                             </p>
                             <div class="sys-action">
@@ -150,7 +150,7 @@
             </div>
         </article>
 
-        <article class="mt-5">
+        <article class="mt-5 pt-5 pb-5"  id="article02">
             <div class="sys-container">
                 <div class="heiglights">
                     <div class="title">
@@ -163,7 +163,7 @@
                             <p class="lead">
                                 <strong><span class="h3 text-accent-65">A</span>venue Design Infotech</strong> orem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, a autem! Ullam beatae sapiente, provident, tempora, suscipit quidem cum similique nostrum natus quisquam omnis quaerat! Ut iure ab perferendis sapiente.
                             </p>
-                            <img src="https://cdn.techinasia.com/talk/images/21282/20180524/b681eb38b46a9d4c2bc28933c5de8d31.png" alt="" class="img-rwd">
+                            <img src="./assests/images/stated.png" alt="" class="img-rwd">
                         </div>
                         <div class="col-md-6">
                             <div class="heiglights-img">
@@ -175,7 +175,7 @@
             </div>
         </article>
 
-        <article class="mt-5 mb-5">
+        <article class="mt-5 mb-5"  id="article03">
             <div class="sys-container">
                 <div class="sys-title mb-3">
                     <h1 class="h4 title">
@@ -226,7 +226,7 @@
             </div>
         </article>
 
-        <article class="mt-5 mb-5">
+        <article class="mt-5 mb-5"  id="article04">
             <div class="sys-container">
                 <div class="sys-grid gap-lg">
                     <div class="col-md-6">
@@ -508,6 +508,13 @@
             var temp = document.querySelector("header .sys-grid");
             var mobileMenu = document.querySelector('.mobile-menu');
             var sticky = navbar.offsetTop;
+
+            let element = document.getElementById('article01');
+            let temp01 = element.offsetTop;
+
+            let element2 = document.getElementById('article02');
+            let temp02 = element2.offsetTop;
+
             function myFunction() {
                 if (window.pageYOffset >= sticky) {
                     navbar.classList.replace("p-3", "p-1");
@@ -527,9 +534,16 @@
                     titleLogo.style.display = "block"
                     logoImg.style.display = "none";
                     temp.style.flexDirection = "row";
-                    mobileMenu.classList.add('hide');
+                    mobileMenu.classList.add('hide');}
+                
+                if(window.pageYOffset >= 500){
+                    element.classList.add("trans");
                 }
-            }
+                else{
+                    element.classList.remove("trans");
+                    element2.classList.add("trans");
+                }
+                }
         </script>
     </body>
 </html>
