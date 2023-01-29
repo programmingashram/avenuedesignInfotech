@@ -35,6 +35,12 @@ header{
 .hide{
     display: none !important;
 }
+.bg-properties{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
 
 
 .trans{
@@ -102,3 +108,86 @@ header{
         opacity: 1;
     }
 }
+
+
+
+
+body {
+    animation: body 1s linear;
+  }
+  
+  
+ 
+  @keyframes progress {
+    to {
+     
+      width: 100%;
+    }
+  }
+  
+  .cube-wrap {
+    --size: 30vmin;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    perspective: 100vmin;
+    z-index: -1;
+    opacity: 0.50;
+}
+  .cube {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+    animation: cube 1s linear;
+  }
+  @keyframes cube {
+    to {
+      transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+    }
+  }
+  
+  .side {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    top: calc(var(--size) * -0.5);
+    left: calc(var(--size) * -0.5);
+    border-radius: 20%;
+  }
+  .top {
+   
+    transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+  }
+  .bottom {
+   
+    transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+  }
+  .left {
+   
+    transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+  }
+  .right {
+  
+    transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+  }
+  .front {
+   
+    transform: translateZ(calc(var(--size) * .5));
+  }
+  .back {
+  
+    transform: translateZ(calc(var(--size) * -.5));
+  }
+  
+  :root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }

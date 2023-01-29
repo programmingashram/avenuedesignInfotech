@@ -36,6 +36,13 @@ header {
   display: none !important;
 }
 
+.bg-properties {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .trans {
   -webkit-animation: slideUp 1s;
           animation: slideUp 1s;
@@ -114,4 +121,98 @@ header {
     transform: translateX(0px);
     opacity: 1;
   }
+}
+body {
+  -webkit-animation: body 1s linear;
+          animation: body 1s linear;
+}
+
+@-webkit-keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+.cube-wrap {
+  --size: 30vmin;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  perspective: 100vmin;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  -webkit-animation: cube 1s linear;
+          animation: cube 1s linear;
+}
+
+@-webkit-keyframes cube {
+  to {
+    transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+  }
+}
+
+@keyframes cube {
+  to {
+    transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+  }
+}
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  top: calc(var(--size) * -0.5);
+  left: calc(var(--size) * -0.5);
+  border-radius: 20%;
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
+}
+
+.bottom {
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
+}
+
+.left {
+  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(calc(var(--size) * -0.5));
+}
+
+.front {
+  transform: translateZ(calc(var(--size) * 0.5));
+}
+
+.back {
+  transform: translateZ(calc(var(--size) * -0.5));
+}
+
+:root * {
+  /* Pause the animation */
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  /* Bind the animation to scroll */
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }/*# sourceMappingURL=style.css.map */
