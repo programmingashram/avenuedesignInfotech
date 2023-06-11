@@ -171,6 +171,16 @@ body {
     display: block;
     animation: slideLeft 1s;
   }
+  body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url(#blob);
+    overflow-x: clip;
+  }
 }
 body {
   overflow-x: hidden;
@@ -462,8 +472,4 @@ body .footer .content {
 }
 .myfooterContact a {
   text-decoration: none;
-}
-
-html {
-  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
